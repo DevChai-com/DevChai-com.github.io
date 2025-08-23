@@ -1,0 +1,35 @@
+<section id="how" class="px-6 py-20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
+      Cómo lo hacemos
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        [
+          {
+            title: 'Análisis',
+            description: 'Evaluamos tus procesos actuales e identificamos oportunidades de mejora con IA.'
+          },
+          {
+            title: 'Implementamos IA real',
+            description: 'Desarrollamos soluciones a medida que se integran en tu stack, sin fricción.'
+          },
+          {
+            title: 'Optimización',
+            description: 'Monitoreamos y mejoramos continuamente el rendimiento de las soluciones.'
+          }
+        ].map((step, index) => (
+          <div class="p-8 text-center border-2 hover:border-accent/50 transition-colors rounded-2xl bg-card">
+            <div class="w-12 h-12 bg-accent text-accent-foreground rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">
+              {index + 1}
+            </div>
+            <h3 class="text-xl font-semibold mb-4">{step.title}</h3>
+            <p class="text-muted-foreground">
+              {step.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

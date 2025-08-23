@@ -1,0 +1,48 @@
+<section class="px-6 py-20 bg-muted/30">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Lo que dicen nuestros clientes</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        [
+          {
+            initials: 'MC',
+            name: 'María Contreras',
+            role: 'CEO, TechSolutions',
+            testimonial:
+              'DevChai transformó completamente nuestros procesos de atención al cliente. <strong class="text-primary">Reducimos tiempos de respuesta en 70%</strong> sin esfuerzo.',
+          },
+          {
+            initials: 'JR',
+            name: 'Jorge Ramírez',
+            role: 'Director, InnovaGroup',
+            testimonial:
+              'La implementación fue impecable y los resultados inmediatos. <strong class="text-primary">Automatizamos el 80% de nuestras tareas administrativas</strong> sin complicaciones ni curva de aprendizaje.',
+          },
+          {
+            initials: 'AF',
+            name: 'Andrés Fernández',
+            role: 'Gerente General, AgroNova',
+            testimonial:
+              'No podía entrar al sistema en medio de reuniones o viajes. Gracias a DevChai <strong class="text-primary">ahora recibo reportes y datos clave directo en mi whatsapp</strong> donde sea que esté.',
+          },
+        ].map(testimonial => (
+          <div class="flex flex-col justify-between p-8 rounded-2xl border backdrop-blur-sm bg-card">
+            <p
+              class="text-muted-foreground mb-6 leading-relaxed"
+              set:html={`"${testimonial.testimonial}"`}
+            />
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mr-4">
+                <span class="text-accent font-semibold">{testimonial.initials}</span>
+              </div>
+              <div>
+                <p class="font-semibold">{testimonial.name}</p>
+                <p class="text-sm text-muted-foreground">{testimonial.role}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

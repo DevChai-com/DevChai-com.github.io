@@ -1,0 +1,98 @@
+<section id="contact" class="px-6 py-24 md:py-32">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-5xl font-bold mb-8">
+      La IA no es el futuro<br />
+      <span class="text-accent">ya está transformando empresas</span>
+    </h2>
+    <p class="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+      Contanos sobre tu proyecto y te ayudamos a optimizarlo con inteligencia artificial.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      <a
+        href="#calendario"
+        class="text-lg px-8 py-4 bg-accent text-accent-foreground rounded-xl hover:bg-accent/90 transition-colors"
+      >
+        📅 Agenda una reunión
+      </a>
+      <a
+        href="#form"
+        class="text-lg px-8 py-4 border border-primary rounded-xl hover:bg-primary hover:text-white transition-colors"
+      >
+        💬 Consulta gratuita
+      </a>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto p-8 rounded-2xl border bg-card backdrop-blur-sm" id="form">
+    <form
+      id="contact-form"
+      class="space-y-6"
+      method="POST"
+      action="https://api.web3forms.com/submit"
+    >
+      <!-- Web3Forms -->
+      <input type="hidden" name="access_key" value="2b59f228-eb3c-4860-baaf-0ee2ea125551" />
+      <input type="hidden" name="subject" value="Nueva consulta desde DevChai" />
+      <input type="hidden" name="from_name" value="DevChai Website" />
+      <!-- opcional: redirección post-éxito -->
+      <input type="hidden" name="redirect" value="https://www.devchai.com/gracias" />
+      <!-- honeypot -->
+      <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-2">Nombre completo *</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder="Tu nombre"
+            class="w-full rounded-lg border px-3 py-2"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-2">Email corporativo *</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            placeholder="tu@empresa.com"
+            class="w-full rounded-lg border px-3 py-2"
+          />
+        </div>
+      </div>
+      <div>
+        <label for="company" class="block text-sm font-medium mb-2">Empresa</label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          placeholder="Nombre de tu empresa"
+          class="w-full rounded-lg border px-3 py-2"
+        />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium mb-2"
+          >Contanos sobre tu proyecto *</label
+        >
+        <textarea
+          id="message"
+          name="message"
+          required
+          rows="5"
+          placeholder="Qué procesos querés optimizar, desafíos, etc."
+          class="w-full rounded-lg border px-3 py-2"></textarea>
+      </div>
+      <div class="flex justify-center">
+        <div class="h-captcha" data-captcha="true"></div>
+      </div>
+      <button type="submit" class="w-full text-lg py-4 bg-accent text-accent-foreground rounded-xl"
+        >🚀 Enviar solicitud</button
+      >
+      <p class="text-xs text-center text-muted-foreground">
+        Protegido contra spam y bots. Respondemos en menos de 24 horas.
+      </p>
+    </form>
+  </div>
+</section>
