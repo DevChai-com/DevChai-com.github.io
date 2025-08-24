@@ -1,3 +1,7 @@
+---
+import { RotateCcw, Bot, MessageSquare, Puzzle } from 'lucide-astro';
+---
+
 <section id="services" class="px-6 py-20">
   <div class="max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -7,27 +11,27 @@
       {
         [
           {
-            icon: '🔄',
+            icon: RotateCcw,
             title: 'Automatización de procesos',
             description: 'Optimiza workflows y elimina tareas repetitivas.',
             hasAction: false,
           },
           {
-            icon: '🤖',
+            icon: Bot,
             title: 'Integración de IA',
             description:
               ' Incorpora inteligencia artificial directamente en tus operaciones existentes.',
             hasAction: false,
           },
           {
-            icon: '💬',
+            icon: MessageSquare,
             title: 'Chatbots conectados',
             description:
               'Asistentes conversacionales que se integran a tus datos y resuelven en contexto.',
             hasAction: false,
           },
           {
-            icon: '🧩',
+            icon: Puzzle,
             title: 'Soluciones a medida',
             description:
               'Apps con IA, servicios LLM, APIs, dashboards. Creamos lo que tu empresa necesita.',
@@ -35,8 +39,8 @@
           },
         ].map(service => (
           <div class="flex flex-col gap-4 p-6 text-center border-2 hover:border-accent/50 transition-colors rounded-2xl bg-card">
-            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
-              {service.icon}
+            <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <service.icon size={32} class="text-accent" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{service.title}</h3>
             <p class="text-sm text-muted-foreground mb-6">{service.description}</p>

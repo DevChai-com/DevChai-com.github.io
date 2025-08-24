@@ -1,3 +1,7 @@
+---
+import { Calendar, MessageCircle, Rocket } from 'lucide-astro';
+---
+
 <section id="contact" class="px-6 py-24 md:py-32">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-3xl md:text-5xl font-bold mb-8">
@@ -10,17 +14,19 @@
     <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
       <a
         href="https://cal.com/devchai-carlos/meet"
-        class="text-lg px-8 py-4 bg-accent text-accent-foreground rounded-xl hover:bg-accent/90 transition-colors"
+        class="text-lg px-8 py-4 bg-accent text-accent-foreground rounded-xl hover:bg-accent/90 transition-colors flex items-center gap-2 justify-center"
         target="_blank"
         rel="noopener noreferrer"
       >
-        📅 Agenda una reunión
+        <Calendar size={20} />
+        Agenda una reunión
       </a>
       <a
         href="#form"
-        class="text-lg px-8 py-4 border border-primary rounded-xl hover:bg-primary hover:text-white transition-colors"
+        class="text-lg px-8 py-4 border border-primary rounded-xl hover:bg-primary hover:text-white transition-colors flex items-center gap-2 justify-center"
       >
-        💬 Consulta gratuita
+        <MessageCircle size={20} />
+        Consulta gratuita
       </a>
     </div>
   </div>
@@ -89,8 +95,8 @@
       <div class="flex justify-center">
         <div class="h-captcha" data-captcha="true"></div>
       </div>
-      <button type="submit" class="w-full text-lg py-4 bg-accent text-accent-foreground rounded-xl"
-        >🚀 Enviar solicitud</button
+      <button type="submit" class="w-full text-lg py-4 bg-accent text-accent-foreground rounded-xl flex items-center gap-2 justify-center"
+        ><Rocket size={20} /> Enviar solicitud</button
       >
       <p class="text-xs text-center text-muted-foreground">
         Protegido contra spam y bots. Respondemos en menos de 24 horas.
