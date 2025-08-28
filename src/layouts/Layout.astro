@@ -8,6 +8,16 @@ const { title, description, url, logo } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W8VFW7DH07"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ window.dataLayer.push(arguments); }
+      (gtag as any)('js', new Date());
+      (gtag as any)('config', 'G-W8VFW7DH07');
+    </script>
+
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={url} />
